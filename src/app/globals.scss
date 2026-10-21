@@ -1,0 +1,30 @@
+@use "@/styles" as *;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: $font;
+  background-color: $color-bg;
+  color: $color-text;
+  -webkit-font-smoothing: antialiased;
+}
+
+// Estructura para que el Footer siempre esté al final de la pantalla
+.layout_body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh; // Ocupa al menos el 100% del viewport
+}
+
+.layout_main {
+  flex: 1; // Hace que <main> crezca y empuje al Footer hacia abajo si hay poco contenido
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
