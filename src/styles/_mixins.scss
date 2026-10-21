@@ -1,1 +1,29 @@
 @use 'tokens' as *;
+
+
+// Mixin para Media Queries limpias
+@mixin respond-to($breakpoint) {$raw-value: map-get($breakpoints,$breakpoint);
+  @if $raw-value {
+    @media (min-width: $raw-value) {
+      @content;
+    }
+  } @else {
+    @error "No existe el breakpoint `#{$breakpoint}` en _tokens.scss";
+  }
+}
+
+// Mixins para jerarquía de títulos
+@mixin type-title-xl {
+  font-family: $font-sans;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+@mixin type-body-sm {
+  font-family: $font-sans;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: $color-text-muted;
+}

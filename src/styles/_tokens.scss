@@ -1,0 +1,21 @@
+
+$font: 'poppins';
+
+// Paleta de Colores
+$color-bg: #ffffff;
+$color-border: #ececec;
+$color-text: #1a1a1a;
+$color-text-muted: #666666;
+$color-brand: #16a34a;
+
+// Parámetros de tu Hero y Cards
+$radius-hero: 30px;
+$border-hero-bottom: 40px;
+
+// Puntos de interrupción (Breakpoints)
+$breakpoints: (
+  'sm': 640px,
+  'md': 768px,
+  'lg': 1024px,
+  'xl': 2400px,
+);
