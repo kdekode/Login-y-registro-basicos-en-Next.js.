@@ -1,4 +1,4 @@
-'use me';
+'use server';
 
 import { db } from "@/db";
 import {users} from "@/db/schema";
@@ -6,7 +6,7 @@ import {eq} from "drizzle-orm";
 import bcrypt from "bcryptjs";
 import {cookies} from "next/headers";
  
-export async function registerUser(formData: FormData) {
+export async function registerAction(formData: FormData) {
     const email = formData.get('email') as string;
     const password = formData.get('password') as string;
      
